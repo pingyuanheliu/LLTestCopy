@@ -13,6 +13,7 @@
 		6A67A34F210E9BC200AF3ED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A67A34E210E9BC200AF3ED8 /* Assets.xcassets */; };
 		6A67A352210E9BC200AF3ED8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A67A350210E9BC200AF3ED8 /* LaunchScreen.storyboard */; };
 		6A67A355210E9BC200AF3ED8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A67A354210E9BC200AF3ED8 /* main.m */; };
+		6A67A35D210EB35300AF3ED8 /* TestCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A67A35C210EB35300AF3ED8 /* TestCopy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		6A67A351210E9BC200AF3ED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A67A353210E9BC200AF3ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A67A354210E9BC200AF3ED8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6A67A35B210EB35300AF3ED8 /* TestCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCopy.h; sourceTree = "<group>"; };
+		6A67A35C210EB35300AF3ED8 /* TestCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCopy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				6A67A346210E9BC000AF3ED8 /* AppDelegate.m */,
 				6A67A348210E9BC000AF3ED8 /* ViewController.h */,
 				6A67A349210E9BC000AF3ED8 /* ViewController.m */,
+				6A67A35B210EB35300AF3ED8 /* TestCopy.h */,
+				6A67A35C210EB35300AF3ED8 /* TestCopy.m */,
 				6A67A34B210E9BC000AF3ED8 /* Main.storyboard */,
 				6A67A34E210E9BC200AF3ED8 /* Assets.xcassets */,
 				6A67A350210E9BC200AF3ED8 /* LaunchScreen.storyboard */,
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A67A35D210EB35300AF3ED8 /* TestCopy.m in Sources */,
 				6A67A34A210E9BC000AF3ED8 /* ViewController.m in Sources */,
 				6A67A355210E9BC200AF3ED8 /* main.m in Sources */,
 				6A67A347210E9BC000AF3ED8 /* AppDelegate.m in Sources */,
