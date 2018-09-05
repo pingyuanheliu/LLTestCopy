@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LLTestCopy"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Just a test for copy."
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    Test Copy.
+                    Just a test for copy. It is my first project for Pod.
                    DESC
 
   s.homepage     = "https://github.com/pingyuanheliu/LLTestCopy"
