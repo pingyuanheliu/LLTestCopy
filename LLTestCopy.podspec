@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "LLTestCopy"
   s.version      = "0.0.1"
-  s.summary      = "A short description of LLTestCopy."
+  s.summary      = "Just a test for copy."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                    Test Copy.
                    DESC
 
   s.homepage     = "https://github.com/pingyuanheliu/LLTestCopy"
@@ -52,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "LL" => "" }
+  s.author             = { "LL" => "1670978751@qq.com" }
   # Or just: s.author    = "LL"
   # s.authors            = { "LL" => "" }
   # s.social_media_url   = "http://twitter.com/LL"
@@ -64,10 +65,10 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+  s.ios.deployment_target = "9.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -79,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/LLTestCopy.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/pingyuanheliu/LLTestCopy.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
