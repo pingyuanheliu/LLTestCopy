@@ -92,6 +92,7 @@ Pod::Spec.new do |s|
   #
 
   s.vendored_frameworks = "TestCopy/**/*.framework"
+  # s.vendored_libraries = ""
   # s.source_files  = "TestCopy/AA/**/*"
   # s.exclude_files = "Classes/Exclude"
   # s.public_header_files = "Classes/**/*.h"
@@ -107,7 +108,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
-
+  s.resource_bundles = "TestCopy/**/*.bundle"
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
