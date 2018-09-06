@@ -1,0 +1,6 @@
+framework module CXARSDK {
+  umbrella header "CXARSDK.h"
+
+  export *
+  module * { export * }
+}

@@ -14,6 +14,7 @@
 		6A67A352210E9BC200AF3ED8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A67A350210E9BC200AF3ED8 /* LaunchScreen.storyboard */; };
 		6A67A355210E9BC200AF3ED8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A67A354210E9BC200AF3ED8 /* main.m */; };
 		6A67A35D210EB35300AF3ED8 /* TestCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A67A35C210EB35300AF3ED8 /* TestCopy.m */; };
+		6AD6ECB52140CD090033578C /* LLTestCopy.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6AD6ECB42140CD090033578C /* LLTestCopy.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		6A67A354210E9BC200AF3ED8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A67A35B210EB35300AF3ED8 /* TestCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCopy.h; sourceTree = "<group>"; };
 		6A67A35C210EB35300AF3ED8 /* TestCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCopy.m; sourceTree = "<group>"; };
+		6AD6ECB42140CD090033578C /* LLTestCopy.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LLTestCopy.podspec; path = ../LLTestCopy.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 		6A67A339210E9BC000AF3ED8 = {
 			isa = PBXGroup;
 			children = (
+				6AD6ECB42140CD090033578C /* LLTestCopy.podspec */,
 				6A67A344210E9BC000AF3ED8 /* TestCopy */,
 				6A67A343210E9BC000AF3ED8 /* Products */,
 			);
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A67A352210E9BC200AF3ED8 /* LaunchScreen.storyboard in Resources */,
+				6AD6ECB52140CD090033578C /* LLTestCopy.podspec in Resources */,
 				6A67A34F210E9BC200AF3ED8 /* Assets.xcassets in Resources */,
 				6A67A34D210E9BC000AF3ED8 /* Main.storyboard in Resources */,
 			);

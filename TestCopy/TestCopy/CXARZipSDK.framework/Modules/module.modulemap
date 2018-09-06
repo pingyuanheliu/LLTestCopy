@@ -1,0 +1,6 @@
+framework module CXARZipSDK {
+  umbrella header "CXARZipSDK.h"
+
+  export *
+  module * { export * }
+}

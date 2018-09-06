@@ -1,0 +1,6 @@
+framework module CXARDownloadSDK {
+  umbrella header "CXARDownloadSDK.h"
+
+  export *
+  module * { export * }
+}
