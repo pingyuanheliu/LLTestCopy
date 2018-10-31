@@ -33,14 +33,16 @@
  测试拷贝
  */
 - (void)testCopyAndMutableCopy {
-    //测试字符串拷贝
-    [self testStringCopy];
-    //测试字典拷贝
+//    //测试字符串拷贝
+//    [self testStringCopy];
+//    //测试字典拷贝
     [self testDictionaryCopy];
-    //测试数组拷贝
-    [self testArrayCopy];
-    //测试自定义对象拷贝
-    [self testCustomObjectCopy];
+//    [self testMutableDictionaryCopy];
+//    [self testDictionaryRealDeepCopy];
+//    //测试数组拷贝
+//    [self testArrayCopy];
+//    //测试自定义对象拷贝
+//    [self testCustomObjectCopy];
 }
 
 /**
@@ -57,7 +59,9 @@
     NSLog(@"testStr3:%p=%@=%@", testStr3, [testStr3 class], testStr3);
     
     printf("\n");
-    
+}
+
+- (void)testMutableStringCopy {
     NSMutableString *testMuStr1 = [[NSMutableString alloc] initWithString:@"TestMuStr1"];
     NSLog(@"TestMuStr1:%p=%@=%@",testMuStr1,[testMuStr1 class],testMuStr1);
     
@@ -68,13 +72,16 @@
     NSLog(@"testMuStr3:%p=%@=%@",testMuStr3,[testMuStr3 class],testMuStr3);
 }
 
+#pragma mark - 字典
+
 /**
  测试字典拷贝
  */
 - (void)testDictionaryCopy {
     printf("\n");
+    NSMutableString *mutableValue = [[NSMutableString alloc] initWithString:@"value"];
     
-    NSDictionary *testDict1 = [[NSDictionary alloc] initWithObjectsAndKeys:@"value", @"key", nil];
+    NSDictionary *testDict1 = [[NSDictionary alloc] initWithObjectsAndKeys:mutableValue, @"key", nil];
     NSLog(@"testDict1:%p=%@=%@", testDict1, [testDict1 class], testDict1);
     for (NSString *key in [testDict1 allKeys]) {
         NSLog(@"value1:%p=%@",testDict1[key], testDict1[key]);
@@ -86,33 +93,77 @@
         NSLog(@"value2:%p=%@",testDict2[key], testDict2[key]);
     }
     
+    NSDictionary *copy1 = [[NSDictionary alloc] initWithDictionary:testDict1];
+    NSLog(@"copy1:%p=%@=%@", copy1, [copy1 class], copy1);
+    for (NSString *key in [copy1 allKeys]) {
+        NSLog(@"copy1:%p=%@",copy1[key], copy1[key]);
+    }
+    
+    NSDictionary *copy2 = [[NSDictionary alloc] initWithDictionary:testDict1 copyItems:YES];
+    NSLog(@"copy2:%p=%@=%@", copy2, [copy2 class], copy2);
+    for (NSString *key in [copy2 allKeys]) {
+        NSLog(@"copy2:%p=%@",copy2[key], copy2[key]);
+    }
+    
     id testDict3 = [testDict1 mutableCopy];
     NSLog(@"testDict3:%p=%@=%@", testDict3, [testDict3 class], testDict3);
     for (NSString *key in [testDict3 allKeys]) {
         NSLog(@"value3:%p=%@",testDict3[key], testDict3[key]);
     }
-    
-    printf("\n");
-    
+    [testDict3 setValue:@"new" forKey:@"key"];
+    NSLog(@"testDict4:%p=%@=%@", testDict3, [testDict3 class], testDict3);
+    for (NSString *key in [testDict3 allKeys]) {
+        NSLog(@"value4:%p=%@",testDict3[key], testDict3[key]);
+    }
+}
+
+/**
+ 测试字典拷贝
+ */
+- (void)testMutableDictionaryCopy {
     NSMutableDictionary *testMuDict1 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"value", @"key", nil];
     NSLog(@"testMuDict1:%p=%@=%@", testMuDict1, [testMuDict1 class], testMuDict1);
     for (NSString *key in [testMuDict1 allKeys]) {
         NSLog(@"value1:%p=%@",testMuDict1[key], testMuDict1[key]);
     }
     
-    id testMuDict2 = [testDict1 copy];
+    id testMuDict2 = [testMuDict1 copy];
     NSLog(@"testMuDict2:%p=%@=%@", testMuDict2, [testMuDict2 class], testMuDict2);
     for (NSString *key in [testMuDict2 allKeys]) {
         NSLog(@"value2:%p=%@",testMuDict2[key], testMuDict2[key]);
     }
     
-    id testMuDict3 = [testDict1 mutableCopy];
+    id testMuDict3 = [testMuDict1 mutableCopy];
     NSLog(@"testMuDict3:%p=%@=%@", testMuDict3, [testMuDict3 class], testMuDict3);
     for (NSString *key in [testMuDict3 allKeys]) {
         NSLog(@"value3:%p=%@",testMuDict3[key], testMuDict3[key]);
     }
+    
+    [testMuDict3 setValue:@"new" forKey:@"key"];
+    NSLog(@"testMuDict4:%p=%@=%@", testMuDict3, [testMuDict3 class], testMuDict3);
+    for (NSString *key in [testMuDict3 allKeys]) {
+        NSLog(@"value4:%p=%@",testMuDict3[key], testMuDict3[key]);
+    }
 }
 
+/**
+ 完全Copy
+ */
+- (void)testDictionaryRealDeepCopy {
+    NSDictionary *testDict1 = [[NSDictionary alloc] initWithObjectsAndKeys:@"value", @"key", nil];
+    NSLog(@"testDict1:%p=%@=%@", testDict1, [testDict1 class], testDict1);
+    for (NSString *key in [testDict1 allKeys]) {
+        NSLog(@"value1:%p=%@",testDict1[key], testDict1[key]);
+    }
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:testDict1];
+    id testDict2 = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSLog(@"testDict2:%p=%@=%@", testDict2, [testDict2 class], testDict2);
+    for (NSString *key in [testDict2 allKeys]) {
+        NSLog(@"value2:%p=%@",testDict2[key], testDict2[key]);
+    }
+}
+
+#pragma mark - 数组
 /**
  测试数组拷贝
  */
